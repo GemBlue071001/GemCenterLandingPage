@@ -1,0 +1,32 @@
+.experience-content {
+  position: relative;
+  overflow: hidden;
+  background: #03070d var(--experience-background) center top / cover no-repeat;
+}
+
+.experience-content::before {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: clamp(150px, 16vw, 270px);
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(to bottom, #020306 0%, rgba(2, 3, 6, .82) 25%, transparent 100%);
+}
+
+.content-section {
+  position: relative;
+  z-index: 1;
+}
+
+.media-placeholder {
+  display: grid;
+  place-items: center;
+  background: #303030;
+  color: #fff;
+  font-size: 12px;
+  font-style: italic;
+  text-transform: uppercase;
+}

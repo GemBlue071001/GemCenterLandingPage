@@ -1,0 +1,233 @@
+.hero {
+  position: relative;
+  min-height: max(780px, 100svh);
+  overflow: hidden;
+  isolation: isolate;
+  background: #020202 url("../assets/headerHero.jpg") center center / cover no-repeat;
+}
+
+.hero::after {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: clamp(130px, 14vw, 240px);
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, #020306 92%);
+}
+
+.hero-overlay {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, .58) 0%, rgba(0, 0, 0, .06) 54%, rgba(0, 0, 0, .04) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  min-height: inherit;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(310px, 380px);
+  align-items: center;
+  gap: clamp(32px, 7vw, 116px);
+  padding-top: 96px;
+  padding-bottom: 54px;
+}
+
+.hero-introduction {
+  justify-self: start;
+  width: min(100%, 650px);
+  padding-top: 68px;
+  text-align: center;
+}
+
+.hero-title-artwork {
+  width: min(100%, 650px);
+  aspect-ratio: 2.4;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.hero-title-artwork img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: translateY(-29%);
+}
+
+.hero-event-summary {
+  margin-top: 50px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .32em;
+  line-height: 1.45;
+}
+
+.hero-event-summary p {
+  margin: 0;
+}
+
+.hero-details {
+  margin-top: 34px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.hero-details p {
+  margin: 12px 0;
+}
+
+.hero-details span {
+  color: #ff7124;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.outline-button {
+  display: inline-block;
+  margin-top: 27px;
+  padding: 13px 16px;
+  border: 1px solid #ff7d37;
+  color: #fff;
+  background: #f46b20;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background .2s ease;
+}
+
+.outline-button:hover {
+  background: #d95512;
+}
+
+.registration-card {
+  justify-self: end;
+  width: 100%;
+  align-self: center;
+  /* margin-top: 68px; */
+  padding: 28px 24px 24px;
+  background: rgba(7, 6, 6, .76);
+  border: 1px solid rgba(255, 255, 255, .05);
+  backdrop-filter: blur(4px);
+}
+
+.registration-heading {
+  margin-bottom: 24px;
+}
+
+.registration-heading h2 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.registration-heading p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.form-fields {
+  display: grid;
+  gap: 12px;
+}
+
+.form-fields input {
+  width: 100%;
+  height: 47px;
+  padding: 0 13px;
+  border: 0;
+  outline: 1px solid transparent;
+  color: #161616;
+  background: #fff;
+  font-size: 14px;
+}
+
+.form-fields input:focus {
+  outline-color: #ff6c23;
+}
+
+.form-fields input::placeholder {
+  color: #333;
+  opacity: 1;
+}
+
+.submit-button {
+  width: 100%;
+  height: 50px;
+  margin-top: 13px;
+  border: 1px solid #ff9057;
+  background: #fa6820;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: background .2s ease;
+}
+
+.submit-button:hover {
+  background: #df5617;
+}
+
+@media (max-width: 980px) {
+  .hero {
+    min-height: auto;
+    background-position: 58% center;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 20px;
+    padding-top: 120px;
+  }
+
+  .hero-introduction {
+    justify-self: stretch;
+    width: auto;
+    padding-top: 0;
+  }
+
+  .registration-card {
+    grid-column: span 2;
+    width: min(100%, 480px);
+    margin: 0 auto 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    background-position: 58% top;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(180deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, .68) 55%, #030303 100%);
+  }
+
+  .hero-content {
+    display: block;
+    padding-top: 135px;
+    padding-bottom: 28px;
+  }
+
+  .hero-introduction {
+    padding-inline: 0;
+  }
+
+  .hero-event-summary {
+    margin-top: 50px;
+    font-size: 10px;
+  }
+
+  .hero-details {
+    margin-top: 27px;
+    font-size: 11px;
+  }
+
+  .registration-card {
+    margin-top: 54px;
+    padding: 23px 16px 17px;
+  }
+}

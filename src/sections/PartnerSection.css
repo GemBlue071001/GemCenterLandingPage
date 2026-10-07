@@ -1,0 +1,83 @@
+.partner-section {
+  padding-top: clamp(35px, 5vw, 90px);
+  padding-bottom: clamp(96px, 11vw, 190px);
+  text-align: center;
+}
+
+.partner-introduction {
+  max-width: 790px;
+  margin: 0 auto;
+}
+
+.partner-gem-logo {
+  display: block;
+  width: clamp(110px, 10vw, 155px);
+  height: auto;
+  margin: 0 auto 27px;
+}
+
+.partner-introduction h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.partner-introduction p {
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.partner-groups {
+  display: grid;
+  gap: 48px;
+  max-width: 900px;
+  margin: 65px auto 0;
+}
+
+.partner-group {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+}
+
+.partner-label {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+}
+
+.partner-placeholder {
+  margin: 0;
+  color: rgba(255, 255, 255, .88);
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.partner-placeholder-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(110px, 1fr));
+  width: 100%;
+  gap: 24px 42px;
+  align-items: center;
+}
+
+.partner-placeholder-grid .partner-placeholder {
+  font-size: 14px;
+  opacity: .78;
+}
+
+@media (max-width: 700px) {
+  .partner-introduction p {
+    font-size: 12px;
+  }
+
+  .partner-placeholder-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px 18px;
+  }
+}

@@ -1,0 +1,19 @@
+.site-header { position: absolute; z-index: 10; top: 0; left: 0; width: 100%; }
+.navigation { min-height: 126px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; line-height: 1; }
+.brand-logo { display: block; width: 112px; height: auto; }
+.navigation-links { display: flex; align-items: center; gap: clamp(20px, 3.5vw, 58px); font-size: 14px; font-weight: 700; text-transform: uppercase; }
+.navigation-links > a:not(.navigation-cta) { transition: color .2s ease; }
+.navigation-links > a:not(.navigation-cta):hover { color: #ff7a25; }
+.navigation-cta { padding: 12px 18px; background: #fb6921; transition: background .2s ease; }
+.navigation-cta:hover { background: #ff823e; }
+.menu-toggle { display: none; }
+
+@media (max-width: 980px) {
+  .navigation { min-height: 88px; }
+  .menu-toggle { display: grid; gap: 5px; width: 42px; padding: 10px; border: 0; background: transparent; }
+  .menu-toggle span:not(.sr-only) { height: 2px; width: 100%; background: #fff; }
+  .navigation-links { position: absolute; top: 75px; left: 20px; right: 20px; display: none; padding: 18px; background: rgba(5, 5, 5, .94); border: 1px solid rgba(255, 255, 255, .12); }
+  .navigation-links.is-open { display: grid; }
+  .navigation-cta { text-align: center; }
+}
