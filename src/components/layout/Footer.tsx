@@ -1,6 +1,7 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import type { CSSProperties } from "react";
 import logo from "../../assets/logo.png";
+import managedByArtwork from "../../assets/managed-by-ihospitality.svg";
 import footerBackground from "../../assets/footer.jpg";
 import "./Footer.css";
 
@@ -43,6 +44,7 @@ export function Footer() {
         </div>
 
         <p className="copyright">© 2026 GEM Center. All rights reserved.</p>
+        <img className="footer-managed" src={managedByArtwork} width={174} height={21} alt="Managed by ihospitality" />
       </div>
     </footer>
   );

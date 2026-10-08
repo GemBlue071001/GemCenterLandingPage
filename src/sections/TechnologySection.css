@@ -1,4 +1,5 @@
 .technology-section {
+  font-family: "Gem Futura", sans-serif;
   padding-top: clamp(60px, 8vw, 125px);
   padding-bottom: clamp(55px, 7vw, 110px);
 }
@@ -17,8 +18,21 @@
 .technology-card h3 {
   margin: 14px 0 0;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
+}
+
+@media (min-width: 981px) {
+  .technology-section {
+    min-height: 29.95vw;
+    padding-top: 2.6vw;
+    padding-bottom: 5.5vw;
+  }
+
+  .technology-grid { gap: 2.4vw; margin-top: 3.5vw; }
+  .technology-media { min-height: 0; aspect-ratio: 2.23; }
+  .technology-section h2 { font-size: 1.71875vw; }
+  .technology-card h3 { margin-top: 1.5vw; font-size: 1.5625vw; line-height: 1.2; }
 }
 
 @media (max-width: 800px) {

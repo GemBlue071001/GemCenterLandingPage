@@ -1,3 +1,15 @@
+@font-face { font-family: "Gem Futura"; src: url("../assets/fonts/futura-regular.otf") format("opentype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Gem Futura"; src: url("../assets/fonts/futura-medium.otf") format("opentype"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Gem Futura"; src: url("../assets/fonts/futura-bold.otf") format("opentype"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Gem Futura"; src: url("../assets/fonts/futura-light.otf") format("opentype"); font-weight: 300; font-display: swap; }
+@font-face { font-family: "Gem Futura Book"; src: url("../assets/fonts/futura-book.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+
+@font-face { font-family: "Gem Futura"; src: url("../assets/fonts/futura-italic.otf") format("opentype"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Gem Futura"; src: url("../assets/fonts/futura-bold-italic.otf") format("opentype"); font-weight: 800; font-style: italic; font-display: swap; }
+@font-face { font-family: "Gem Futura"; src: url("../assets/fonts/futura-light-italic.otf") format("opentype"); font-weight: 200; font-style: italic; font-display: swap; }
+
+@font-face { font-family: "Gem Acherus"; src: url("../assets/fonts/acherus-bold.otf") format("opentype"); font-weight: 700; font-display: swap; }
+
 :root {
   color: #fff;
   background: #030303;

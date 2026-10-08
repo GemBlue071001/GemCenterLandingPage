@@ -1,4 +1,5 @@
 .event-section {
+  font-family: "Gem Futura", sans-serif;
   display: grid;
   grid-template-columns: minmax(0, .95fr) minmax(360px, .75fr);
   align-items: center;
@@ -14,8 +15,8 @@
 .technology-section h2 {
   margin: 0;
   font-size: clamp(22px, 2vw, 31px);
-  font-weight: 800;
-  line-height: 1.05;
+  font-weight: 700;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
@@ -37,15 +38,39 @@
 
 .event-callout {
   margin: 22px 0 0;
+  font-style: italic;
 }
 
 .event-callout strong {
-  color: #ff7a29;
+  color: #fff;
+  font-weight: 800;
   text-transform: uppercase;
 }
 
 .event-media {
   min-height: 286px;
+}
+
+/* PDF page 2: the introduction occupies the first 504 of 1080 points. */
+@media (min-width: 981px) {
+  .event-section {
+    min-height: 26.3vw;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 5.2vw;
+    padding-top: 3.58vw;
+  }
+
+  .event-copy { max-width: none; }
+  .event-copy h2 { font-size: 1.822917vw; }
+  .event-copy p, .event-copy li { font-size: 1.302083vw; line-height: 1.2; }
+  .event-copy > p:first-of-type { margin-top: 2.916667vw; }
+  .event-callout { margin-top: 1.770833vw; }
+  .event-media { min-height: 0; aspect-ratio: 758.85 / 435.65; }
+}
+
+@media (max-width: 980px) {
+  .event-copy-break { display: none; }
 }
 
 @media (max-width: 900px) {
