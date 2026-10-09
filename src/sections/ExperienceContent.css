@@ -21,7 +21,39 @@
   z-index: 1;
 }
 
+/* PDF pages 2–3 share one continuous background and a 1920 x 2160 canvas. */
+@media (min-width: 981px) {
+  .experience-content {
+    min-height: 112.5vw;
+    background-color: #000;
+    background-image: url("../assets/backgrounds/experience-original.png");
+    background-position: -.717877vw -70.417242vw;
+    background-size: 100.717819vw 180.3311vw;
+  }
+
+  .experience-content > .container {
+    width: 91.25%;
+    max-width: none;
+  }
+
+  .experience-content::before {
+    /* Keep the introduction dark, then reveal the galaxy below the cards. */
+    height: 50vw;
+    background: linear-gradient(
+      to bottom,
+      #000 0%,
+      rgba(0, 0, 0, .8) 12%,
+      rgba(0, 0, 0, .7) 45%,
+      rgba(0, 0, 0, .5) 65%,
+      rgba(0, 0, 0, .2) 82%,
+      transparent 100%
+    );
+  }
+}
+
 .media-placeholder {
+  font-family: "Gem Futura", sans-serif;
+  font-weight: 200;
   display: grid;
   place-items: center;
   background: #303030;
@@ -29,4 +61,8 @@
   font-size: 12px;
   font-style: italic;
   text-transform: uppercase;
+}
+
+@media (min-width: 981px) {
+  .media-placeholder { font-size: 1.302083vw; }
 }

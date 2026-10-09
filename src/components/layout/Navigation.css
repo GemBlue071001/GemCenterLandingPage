@@ -1,13 +1,21 @@
-.site-header { position: absolute; z-index: 10; top: 0; left: 0; width: 100%; }
+.site-header { position: absolute; z-index: 10; top: 0; left: 0; width: 100%; font-family: "Gem Futura", sans-serif; }
 .navigation { min-height: 126px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; line-height: 1; }
 .brand-logo { display: block; width: 112px; height: auto; }
 .navigation-links { display: flex; align-items: center; gap: clamp(20px, 3.5vw, 58px); font-size: 14px; font-weight: 700; text-transform: uppercase; }
 .navigation-links > a:not(.navigation-cta) { transition: color .2s ease; }
 .navigation-links > a:not(.navigation-cta):hover { color: #ff7a25; }
-.navigation-cta { padding: 12px 18px; background: #fb6921; transition: background .2s ease; }
+.navigation-cta { padding: 5px 20px; background: #f6651b; font-weight: 500; clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%); transition: background .2s ease; }
 .navigation-cta:hover { background: #ff823e; }
 .menu-toggle { display: none; }
+
+/* Retain the wide menu spacing while capping the header controls. */
+@media (min-width: 981px) {
+  .navigation.container { width: 91.25%; max-width: none; min-height: 0; height: clamp(100px, 9.826vw, 188px); }
+  .brand-logo { width: clamp(90px, 6.90625vw, 133px); }
+  .navigation-links { width: 66.67vw; justify-content: space-between; gap: 0; font-size: clamp(14px, 1.15104vw, 22px); font-weight: 500; line-height: 1.35; }
+  .navigation-cta { display: flex; align-items: center; justify-content: center; width: clamp(88px, 6.817vw, 131px); height: clamp(30px, 2.03646vw, 39px); padding: 0; clip-path: polygon(0 0, calc(100% - .52vw) 0, 100% .52vw, 100% 100%, 0 100%); }
+}
 
 @media (max-width: 980px) {
   .navigation { min-height: 88px; }

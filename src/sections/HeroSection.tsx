@@ -1,4 +1,6 @@
 import futureBanquetArtwork from "../assets/FBanquet.png";
+import { LuCalendarDays } from "react-icons/lu";
+import { FaLocationDot } from "react-icons/fa6";
 import "./HeroSection.css";
 
 export function HeroSection() {
@@ -18,8 +20,8 @@ export function HeroSection() {
           </div>
 
           <div className="hero-details">
-            <p><span aria-hidden="true">◉</span> 09:00 - 16:00 | 20.10.2026</p>
-            <p><span aria-hidden="true">●</span> GEM Center<br />08 Nguyễn Bỉnh Khiêm, Phường Sài Gòn, TP.HCM</p>
+            <p><span className="hero-detail-icon" aria-hidden="true"><LuCalendarDays /></span>09:00 - 16:00 | 20.10.2026</p>
+            <p><span className="hero-detail-icon" aria-hidden="true"><FaLocationDot /></span>GEM Center<br />08 Nguyễn Bỉnh Khiêm, Phường Sài Gòn, TP.HCM</p>
           </div>
 
           <a className="outline-button" href="#su-kien">Xem thêm chương trình</a>
