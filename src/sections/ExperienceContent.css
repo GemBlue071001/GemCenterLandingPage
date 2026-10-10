@@ -21,13 +21,25 @@
   z-index: 1;
 }
 
-/* Avoid a very large composited background layer while scrolling on mobile. */
+.experience-overview {
+  display: contents;
+}
+
+/* Mobile sections have independent crops so content height cannot move the galaxy. */
 @media (max-width: 980px) {
   .experience-content {
-    background-attachment: scroll;
-    background-position: center top;
-    background-size: auto 1080px;
-    background-repeat: repeat-y;
+    background: #000;
+  }
+
+  .experience-overview {
+    display: flow-root;
+    background-color: #000;
+    background-image:
+      linear-gradient(to bottom, rgba(0, 0, 0, .65), transparent 65%, rgba(0, 0, 0, .55) 100%),
+      var(--experience-background);
+    background-position: center, center top;
+    background-size: 100% 100%, cover;
+    background-repeat: no-repeat;
   }
 }
 
@@ -41,7 +53,7 @@
     background-size: 100.717819vw 180.3311vw;
   }
 
-  .experience-content > .container {
+  .experience-content .content-section.container {
     width: 91.25%;
     max-width: none;
   }

@@ -11,8 +11,10 @@ export function ExperienceContent() {
       className="experience-content"
       style={{ "--experience-background": `url(${contentBackground})` } as CSSProperties}
     >
-      <EventSection />
-      <TechnologySection />
+      <div className="experience-overview">
+        <EventSection />
+        <TechnologySection />
+      </div>
       <PartnerSection />
     </div>
   );

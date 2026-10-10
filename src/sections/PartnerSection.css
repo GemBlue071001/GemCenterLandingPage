@@ -96,6 +96,31 @@
 }
 
 @media (max-width: 980px) {
+  .partner-section {
+    isolation: isolate;
+  }
+
+  /* Use the lower half of the artwork: galaxy rim at the top, blue below it.
+     The full-width layer is sized only by this section, not the stacked cards. */
+  .partner-section::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    top: -55px;
+    bottom: 0;
+    left: calc((100% - 100vw) / 2);
+    width: 100vw;
+    background-color: #000;
+    background-image: var(--experience-background);
+    background-size: auto 200%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    /* Blend into the preceding section's bottom padding instead of a black band. */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 110px, #000 72%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0, #000 110px, #000 72%, transparent 100%);
+  }
+
   .partner-copy-break { display: none; }
 }
 
