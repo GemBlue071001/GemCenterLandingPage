@@ -21,6 +21,16 @@
   z-index: 1;
 }
 
+/* Avoid a very large composited background layer while scrolling on mobile. */
+@media (max-width: 980px) {
+  .experience-content {
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: auto 1080px;
+    background-repeat: repeat-y;
+  }
+}
+
 /* PDF pages 2–3 share one continuous background and a 1920 x 2160 canvas. */
 @media (min-width: 981px) {
   .experience-content {
