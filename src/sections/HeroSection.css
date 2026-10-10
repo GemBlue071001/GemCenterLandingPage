@@ -166,14 +166,19 @@
   }
 
   .hero-content {
-    grid-template-columns: 1fr 1fr;
-    gap: 35px 20px;
+    display: block;
     padding-top: 120px;
   }
 
   .hero-introduction {
-    justify-self: stretch;
-    width: auto;
+    width: min(100%, 650px);
+    margin-inline: auto;
+    padding-top: 0;
+  }
+
+  /* The title artwork is vertically cropped within this ratio box. The desktop
+     offset above consumes most of the box on narrow screens, so remove it. */
+  .hero-title-artwork {
     padding-top: 0;
   }
 
@@ -189,7 +194,6 @@
   }
 
   .hero-content {
-    display: block;
     padding-top: 135px;
     padding-bottom: 28px;
   }
