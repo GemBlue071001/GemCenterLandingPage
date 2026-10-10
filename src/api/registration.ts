@@ -6,6 +6,12 @@ export type RegistrationPayload = {
   phone: string;
 };
 
+export class RegistrationApiError extends Error {
+  constructor(public readonly status: number) {
+    super("Registration request failed");
+  }
+}
+
 // const registrationsEndpoint = "https://3pgnfojbw4.execute-api.ap-southeast-1.amazonaws.com/registrations" -- real ;
 const registrationsEndpoint = "https://zm0f2zb9a1.execute-api.ap-southeast-1.amazonaws.com/registrations";
 
@@ -19,6 +25,6 @@ export async function submitRegistration(payload: RegistrationPayload) {
   });
 
   if (!response.ok) {
-    throw new Error("Registration request failed");
+    throw new RegistrationApiError(response.status);
   }
 }

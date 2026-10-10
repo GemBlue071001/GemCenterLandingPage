@@ -93,6 +93,10 @@
   color: #b9f7c7;
 }
 
+.form-status--duplicate {
+  color: #ffd29d;
+}
+
 .form-status--error {
   color: #ffb2a2;
 }

@@ -1,9 +1,9 @@
 import { useState, type FormEvent } from "react";
-import { submitRegistration } from "../../api/registration";
+import { RegistrationApiError, submitRegistration } from "../../api/registration";
 import "./RegistrationForm.css";
 
 export function RegistrationForm() {
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "duplicate" | "error">("idle");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -22,8 +22,8 @@ export function RegistrationForm() {
       });
       form.reset();
       setStatus("success");
-    } catch {
-      setStatus("error");
+    } catch (error) {
+      setStatus(error instanceof RegistrationApiError && error.status === 409 ? "duplicate" : "error");
     }
   }
 
@@ -63,6 +63,7 @@ export function RegistrationForm() {
 
       <p className={`form-status form-status--${status}`} role="status" aria-live="polite">
         {status === "success" && "Đăng ký thành công. Cảm ơn bạn đã quan tâm!"}
+        {status === "duplicate" && "Bạn đã đăng ký, vui lòng kiểm tra email."}
         {status === "error" && "Không thể gửi đăng ký lúc này. Vui lòng thử lại."}
       </p>
     </form>
