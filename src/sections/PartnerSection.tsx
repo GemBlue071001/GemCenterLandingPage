@@ -1,5 +1,6 @@
 import logo from "../assets/logo.png";
 import partnerLogos from "../assets/partner-logos.svg";
+import partnerLogosMobile from "../assets/partner-logos-mobile.webp";
 import "./PartnerSection.css";
 
 export function PartnerSection() {
@@ -15,14 +16,18 @@ export function PartnerSection() {
       </div>
 
       <div className="partner-groups">
-        <img
-          className="partner-logos-artwork"
-          src={partnerLogos}
-          width={1530}
-          height={570}
-          alt="Đơn vị đồng tổ chức: Lá Trường Xuân. Đối tác đồng hành: The Bros cùng các đối tác trong chương trình."
-          loading="lazy"
-        />
+        <picture>
+          <source media="(max-width: 980px)" srcSet={partnerLogosMobile} type="image/webp" />
+          <img
+            className="partner-logos-artwork"
+            src={partnerLogos}
+            width={1530}
+            height={570}
+            alt="Đơn vị đồng tổ chức: Lá Trường Xuân. Đối tác đồng hành: The Bros cùng các đối tác trong chương trình."
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
       </div>
     </section>
   );
