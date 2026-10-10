@@ -1,0 +1,127 @@
+.registration-card {
+  justify-self: end;
+  width: 100%;
+  align-self: center;
+  padding: 28px 24px 24px;
+  background: rgba(7, 6, 6, .58);
+  border: 1px solid rgba(255, 255, 255, .05);
+}
+
+.registration-heading {
+  margin-bottom: 24px;
+}
+
+.registration-heading h2 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.registration-heading p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.form-fields {
+  display: grid;
+  gap: 12px;
+}
+
+.form-fields input {
+  width: 100%;
+  height: 47px;
+  padding: 0 13px;
+  border: 0;
+  outline: 1px solid transparent;
+  color: #161616;
+  background: #fff;
+  font-size: 14px;
+}
+
+.form-fields input:focus {
+  outline-color: #ff6c23;
+}
+
+.form-fields input::placeholder {
+  color: #333;
+  opacity: 1;
+}
+
+.submit-button {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-top: 13px;
+  border: 0;
+  background: #f6651b;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: background .2s ease;
+}
+
+.submit-button::before,
+.submit-button::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  pointer-events: none;
+}
+
+.submit-button::before { left: 5px; bottom: 5px; border-left: 1px solid #fff; border-bottom: 1px solid #fff; }
+.submit-button::after { right: 5px; top: 5px; border-right: 1px solid #fff; border-top: 1px solid #fff; }
+
+.submit-button:hover {
+  background: #df5617;
+}
+
+.submit-button:disabled {
+  cursor: wait;
+  opacity: .75;
+}
+
+.form-status {
+  min-height: 20px;
+  margin: 10px 0 0;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.form-status--success {
+  color: #b9f7c7;
+}
+
+.form-status--error {
+  color: #ffb2a2;
+}
+
+@media (min-width: 981px) {
+  .registration-card { position: absolute; right: 0; top: 20.09259%; width: calc(542.0001 * var(--hero-unit)); padding: calc(30.0000 * var(--hero-unit)) calc(32.0001 * var(--hero-unit)); border: 0; }
+  .registration-heading { margin-bottom: calc(32.0001 * var(--hero-unit)); }
+  .registration-heading h2 { margin: 0; font-size: calc(24.0000 * var(--hero-unit)); line-height: 1.3; font-weight: 700; }
+  .registration-heading p { font-size: calc(24.0000 * var(--hero-unit)); line-height: 1.3; font-weight: 300; white-space: nowrap; }
+  .form-fields { gap: calc(18.0000 * var(--hero-unit)); }
+  .form-fields label { display: block; }
+  .form-fields input { display: block; height: calc(69.9999 * var(--hero-unit)); padding: 0 calc(18.0000 * var(--hero-unit)); font-family: "Gem Futura Book", sans-serif; font-size: calc(24.9999 * var(--hero-unit)); border-radius: 0; }
+  .submit-button { display: block; height: calc(68.0001 * var(--hero-unit)); margin-top: calc(18.0000 * var(--hero-unit)); font-size: calc(24.9999 * var(--hero-unit)); }
+  .submit-button::before, .submit-button::after { width: calc(20.0001 * var(--hero-unit)); height: calc(20.0001 * var(--hero-unit)); border-width: 2px; }
+  .submit-button::before { left: calc(6.9999 * var(--hero-unit)); bottom: calc(6.9999 * var(--hero-unit)); }
+  .submit-button::after { right: calc(6.9999 * var(--hero-unit)); top: calc(6.9999 * var(--hero-unit)); }
+}
+
+@media (max-width: 980px) {
+  .registration-card {
+    grid-column: span 2;
+    width: min(100%, 480px);
+    margin: 0 auto 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .registration-card {
+    margin-top: 54px;
+    padding: 23px 16px 17px;
+  }
+}
